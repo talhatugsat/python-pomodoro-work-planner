@@ -26,7 +26,7 @@ def basla(sec):
     while True:
         timestamp = datetime.datetime.now().timestamp()
         if (sec + (60*int(kacdakika))) < timestamp:
-            n.show_toast("Hatırlatıcı","Ara vermelisin, yararlı bilgilerde bu tenefüs: " + bilgiler[random.randint(0,(len(bilgiler)-1))], duration=20, threaded=True)
+            n.show_toast("Hatırlatıcı","Ara vermelisin, yararlı bilgilerde bu tenefüs: " + random.choice(bilgiler), duration=20, threaded=True)
             araVer(timestamp)
             break
 
